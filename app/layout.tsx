@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
-        <div className="  p-4   h-[calc(100vh-60px)]">
+        <div className="  p-4  overflow-auto no-scrollbar h-[calc(100vh-60px)]">
 
           {children}
 

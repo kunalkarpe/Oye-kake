@@ -31,7 +31,7 @@ const TABS = [
 const Navbar = () => {
     const pathName = usePathname()
     return (
-        <div className="flex border justify-between items-center h-14 px-4 bg-white z-30 sticky top-0 right-0 left-0">
+        <div className="flex border-b border-gray-100 justify-between items-center h-14 px-4 bg-white z-30 sticky top-0 right-0 left-0">
             <div className="flex gap-1 justify-center items-center">
 
                 <Image alt="logo.jpg" src={Logo} className="h-12 w-12" />
