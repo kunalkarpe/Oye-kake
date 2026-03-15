@@ -1,9 +1,11 @@
+"use client"
 import Image from "next/image"
 import Ghatkopar from "../../components/images/Ghatkopar.webp"
 import LowerParel from "../../components/images/Lower Parel.webp"
 import Fort from "../../components/images/Fort.webp"
 import Hyderabad from "../../components/images/Hyderabad.jpg"
 import { ArrowRight, Map, MapPin } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 const LOCATION = [
     {
@@ -38,8 +40,13 @@ const LOCATION = [
 ]
 
 const Location = () => {
+    const router = useRouter()
+
+    const handleClick = () => {
+        router.push("/reservation")
+    }
     return (
-        <div className="h-full w-full gap-4 flex flex-col">
+        <div className="h-fit w-full gap-4 flex flex-col py-4    ">
             <p className="text-center font-bold text-gray-500">LOCATIONS</p>
             <div className="flex flex-col items-center gap-8 px-4">
 
@@ -55,7 +62,7 @@ const Location = () => {
                                 </div>
                                 <div className={`flex w-full  gap-4`}>
 
-                                    <button className=" flex items-center justify-center gap-2 ring-1 ring-primary text-white bg-primary w-44 rounded-full h-10 hover:cursor-pointer">
+                                    <button className=" flex items-center justify-center gap-2 ring-1 ring-primary text-white bg-primary w-44 rounded-full h-10 hover:cursor-pointer" onClick={handleClick}>
                                         Book Table <ArrowRight className="size-4 text-white" />
                                     </button>
                                     <button className=" flex items-center justify-center gap-2 ring-1 ring-secondary text-secondary   w-44 rounded-full h-10 hover:cursor-pointer">
